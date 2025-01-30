@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdexcept>
 
-double mySqrt(double x)
+double my_sqrt(double x)
 {
 	if (x < 0)
 	{
