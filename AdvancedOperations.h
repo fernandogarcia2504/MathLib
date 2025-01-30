@@ -8,7 +8,7 @@
  * Ofrece métodos para calcular el factorial de un número y la combinación de dos números
  * según el principio de la combinatoria.
  */
-class AdvancedOperations {
+class advanced_operations {
 public:
     /**
      * @brief Calcula el factorial de un número entero no negativo.
