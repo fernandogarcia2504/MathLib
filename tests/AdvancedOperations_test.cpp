@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "AdvancedOperations.h"
+#include "../AdvancedOperations.h"
 
 TEST(AdvancedOperationsTest, Factorial) {
     EXPECT_EQ(120, AdvancedOperations::factorial(5));

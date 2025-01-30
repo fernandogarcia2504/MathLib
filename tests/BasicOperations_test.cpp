@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "BasicOperations.h"
+#include "../BasicOperations.h"
 
 TEST(BasicOperationsTest, Addition) {
     EXPECT_EQ(5, BasicOperations::add(2, 3));
