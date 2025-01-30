@@ -8,7 +8,7 @@
  * Incluye métodos para realizar operaciones aritméticas como suma, resta, multiplicación y división.
  * Las operaciones lanzan excepciones en caso de errores, como la división por cero.
  */
-class advanced_operations {
+class basic_operations {
 public:
     /**
      * @brief Suma dos números de punto flotante.
