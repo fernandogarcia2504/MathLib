@@ -8,12 +8,10 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 # Archivos fuente para la compilación principal
 set(SOURCES
-        main.cpp
-        MyMathLib.h
-        BasicOperations.cpp
-        AdvancedOperations.cpp
+    BasicOperations.cpp
+    AdvancedOperations.cpp
+    MyMathLib.h
 )
-
 
 add_executable(unit_test ${SOURCES})
 
@@ -45,6 +43,9 @@ if(ENABLE_TESTING)
 
     # Enlazar GoogleTest
     target_link_libraries(test_suite PRIVATE gtest gtest_main)
+
+    # Enlazar la biblioteca de operaciones básicas y avanzadas
+    target_link_libraries(test_suite PRIVATE unit_test)
 
     # Registrar las pruebas con CTest
     add_test(NAME AllTests COMMAND test_suite)
