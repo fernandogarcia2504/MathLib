@@ -29,8 +29,11 @@ if(ENABLE_TESTING)
 
     # Archivos de pruebas
     set(TEST_SOURCES
-        test.cpp
+        tests/test.cpp
+        tests/BasicOperations_test.cpp  # Agrega aquí los nuevos archivos de pruebas
+        tests/AdvancedOperations_test.cpp
     )
+
 
     # Crear ejecutable de pruebas
     add_executable(test_suite ${TEST_SOURCES})
