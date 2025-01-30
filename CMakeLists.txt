@@ -6,10 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCES
         main.cpp
         MyMathLib.h
+        BasicOperations.cpp
+        AdvancedOperations.cpp
 )
 
 
-add_executable(unit_test main.cpp)
+add_executable(unit_test ${SOURCES})
 
 # Opciones
 option(ENABLE_TESTING "Enable a Unit Testing build." ON)
@@ -30,7 +32,7 @@ if(ENABLE_TESTING)
     # Archivos de pruebas
     set(TEST_SOURCES
         tests/test.cpp
-        tests/BasicOperations_test.cpp  # Agrega aquí los nuevos archivos de pruebas
+        tests/BasicOperations_test.cpp  
         tests/AdvancedOperations_test.cpp
     )
 
