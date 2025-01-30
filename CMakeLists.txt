@@ -4,7 +4,7 @@ project(unit_test)
 set(CMAKE_CXX_STANDARD 17)
 
 # Agregar el directorio src a las rutas de búsqueda de encabezados
-include_directories(${CMAKE_SOURCE_DIR}/src)
+include_directories(${CMAKE_SOURCE_DIR})
 
 # Archivos fuente para la compilación principal
 set(SOURCES
