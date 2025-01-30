@@ -1,24 +1,23 @@
-cmake_minimum_required(VERSION 3.30)
+cmake_minimum_required(VERSION 3.30) 
 project(unit_test)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Agregar el directorio src a las rutas de búsqueda de encabezados
-include_directories(${CMAKE_SOURCE_DIR})
-
-# Archivos fuente para la compilación principal
+# Fuente principal (main)
 set(SOURCES
-    BasicOperations.cpp
-    AdvancedOperations.cpp
+    main.cpp
     MyMathLib.h
+    basicoperations.cpp
+    advancedoperations.cpp
 )
 
+# Ejecutable principal
 add_executable(unit_test ${SOURCES})
 
 # Opciones
 option(ENABLE_TESTING "Enable a Unit Testing build." ON)
 
-# Descargar GoogleTest usando FetchContent
+# Descarga GoogleTest usando FetchContent
 include(FetchContent)
 FetchContent_Declare(
     googletest
@@ -27,26 +26,22 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-# Si se habilitan las pruebas, agregar GoogleTest y las pruebas unitarias
+# Si se habilitan las pruebas, agrega GoogleTest y las pruebas unitarias
 if(ENABLE_TESTING)
     enable_testing()
 
-    # Archivos de prueba
+    # Archivos de pruebas
     set(TEST_SOURCES
-        tests/test.cpp
-        tests/BasicOperations_test.cpp  
-        tests/AdvancedOperations_test.cpp
+        tests/test_basic_operations.cpp
+        tests/test_advanced_operations.cpp
     )
 
-    # Crear el ejecutable para las pruebas
+    # Crear ejecutable de pruebas
     add_executable(test_suite ${TEST_SOURCES})
 
     # Enlazar GoogleTest
     target_link_libraries(test_suite PRIVATE gtest gtest_main)
 
-    # Enlazar la biblioteca de operaciones básicas y avanzadas
-    target_link_libraries(test_suite PRIVATE unit_test)
-
-    # Registrar las pruebas con CTest
+    # Registrar pruebas con CTest
     add_test(NAME AllTests COMMAND test_suite)
 endif()
