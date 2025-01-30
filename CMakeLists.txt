@@ -7,8 +7,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCES
     main.cpp
     MyMathLib.h
-    basicoperations.cpp
-    advancedoperations.cpp
+    BasicOperations.cpp
+    AdvancedOperations.cpp
 )
 
 # Ejecutable principal
@@ -32,8 +32,8 @@ if(ENABLE_TESTING)
 
     # Archivos de pruebas
     set(TEST_SOURCES
-        tests/test_basic_operations.cpp
-        tests/test_advanced_operations.cpp
+        tests/BasicOperations_test.cpp
+        tests/AdvancedOperations_test.cpp
     )
 
     # Crear ejecutable de pruebas
