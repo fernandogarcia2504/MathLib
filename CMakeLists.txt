@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.30) 
+cmake_minimum_required(VERSION 3.10)  
 project(unit_test)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -37,7 +37,7 @@ if(ENABLE_TESTING)
     )
 
     # Crear ejecutable de pruebas
-    add_executable(test_suite ${TEST_SOURCES})
+    add_executable(test_suite ${TEST_SOURCES} ${SOURCES})  
 
     # Enlazar GoogleTest
     target_link_libraries(test_suite PRIVATE gtest gtest_main)
