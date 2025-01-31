@@ -32,8 +32,8 @@ if(ENABLE_TESTING)
 
     # Archivos de pruebas
     set(TEST_SOURCES
-        tests/BasicOperations_test.cpp
-        tests/AdvancedOperations_test.cpp
+        tests/BasicOperationsTest.cpp
+        tests/AdvancedOperationsTest.cpp
     )
 
     # Crear ejecutable de pruebas
