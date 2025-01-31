@@ -19,7 +19,7 @@ public:
      * @param b El segundo número para la suma.
      * @return La suma de `a` y `b`.
      */
-    static double add(double a, double b);
+    static double Add(double a, double b);
 
     /**
      * @brief Resta dos números de punto flotante.
@@ -30,7 +30,7 @@ public:
      * @param b El número que se va a restar de `a`.
      * @return La resta de `a` y `b`.
      */
-    static double subtract(double a, double b);
+    static double Subtract(double a, double b);
 
     /**
      * @brief Multiplica dos números de punto flotante.
@@ -41,7 +41,7 @@ public:
      * @param b El segundo número para la multiplicación.
      * @return El producto de `a` y `b`.
      */
-    static double multiply(double a, double b);
+    static double Multiply(double a, double b);
 
     /**
      * @brief Divide dos números de punto flotante.
@@ -54,7 +54,7 @@ public:
      * @return El cociente de `a` dividido entre `b`.
      * @throw std::runtime_error Si `b` es igual a cero.
      */
-    static double divide(double a, double b);
+    static double Divide(double a, double b);
 };
 
 #endif // BASIC_OPERATIONS_H

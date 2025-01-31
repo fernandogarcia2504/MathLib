@@ -1,7 +1,7 @@
 #include "AdvancedOperations.h"
 #include <stdexcept>
 
-long long advanced_operations::factorial(int n) {
+long long AdvancedOperations::Factorial(int n) {
     if (n < 0) {
         std::runtime_error error("Negative numbers not allowed");
         throw error;
@@ -13,7 +13,7 @@ long long advanced_operations::factorial(int n) {
     return result;
 }
 
-long long advanced_operations::combination(int n, int r) {
+long long AdvancedOperations::Combination(int n, int r) {
     if (n < 0) {
         throw std::runtime_error("Invalid values for combination");
     }
@@ -23,5 +23,5 @@ long long advanced_operations::combination(int n, int r) {
     if (r > n) {
         throw std::runtime_error("Invalid values for combination");
     }
-    return factorial(n) / (factorial(r) * factorial(n - r));
+    return Factorial(n) / (Factorial(r) * Factorial(n - r));
 }

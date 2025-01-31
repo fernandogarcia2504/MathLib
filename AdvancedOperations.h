@@ -8,7 +8,7 @@
  * Ofrece métodos para calcular el factorial de un número y la combinación de dos números
  * según el principio de la combinatoria.
  */
-class advanced_operations {
+class AdvancedOperations {
 public:
     /**
      * @brief Calcula el factorial de un número entero no negativo.
@@ -20,7 +20,7 @@ public:
      * @return El factorial de n.
      * @throw std::runtime_error Si n es negativo.
      */
-    static long long factorial(int n);
+    static long long Factorial(int n);
 
     /**
      * @brief Calcula el número de combinaciones posibles al elegir r elementos de un conjunto de n elementos.
@@ -33,7 +33,7 @@ public:
      * @return El número de combinaciones posibles.
      * @throw std::runtime_error Si los valores de n o r no son válidos.
      */
-    static long long combination(int n, int r);
+    static long long Combination(int n, int r);
 };
 
 #endif // ADVANCED_OPERATIONS_H
