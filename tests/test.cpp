@@ -3,5 +3,5 @@
 
 TEST(MathTestCase, MathTestSqrt9)
 {
-	ASSERT_EQ(3, my_sqrt(9));
+    ASSERT_EQ(3, my_sqrt(9));
 }
